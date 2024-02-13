@@ -33,84 +33,84 @@ CREATE TABLE `human_friends`.`pack_animals_subclass` (
 
 CREATE TABLE `human_friends`.`dog` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `id_subclass_pet` INT NOT NULL,
+  `id_subclass` INT NOT NULL,
   `nickname` VARCHAR(45) NOT NULL,
   `date_birth` DATETIME NOT NULL,
   `commands` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_id_subclass_dog_idx` (`id_subclass_pet` ASC) VISIBLE,
+  INDEX `fk_id_subclass_dog_idx` (`id_subclass` ASC) VISIBLE,
   CONSTRAINT `fk_id_subclass_dog`
-    FOREIGN KEY (`id_subclass_pet`)
+    FOREIGN KEY (`id_subclass`)
     REFERENCES `human_friends`.`pets_subclass` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
 CREATE TABLE `human_friends`.`cat` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `id_subclass_pet` INT NOT NULL,
+  `id_subclass` INT NOT NULL,
   `nickname` VARCHAR(45) NOT NULL,
   `date_birth` DATETIME NOT NULL,
   `commands` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_id_subclass_cat_idx` (`id_subclass_pet` ASC) VISIBLE,
+  INDEX `fk_id_subclass_cat_idx` (`id_subclass` ASC) VISIBLE,
   CONSTRAINT `fk_id_subclass_cat`
-    FOREIGN KEY (`id_subclass_pet`)
+    FOREIGN KEY (`id_subclass`)
     REFERENCES `human_friends`.`pets_subclass` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
 CREATE TABLE `human_friends`.`hamster` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `id_subclass_pet` INT NOT NULL,
+  `id_subclass` INT NOT NULL,
   `nickname` VARCHAR(45) NOT NULL,
   `date_birth` DATETIME NOT NULL,
   `commands` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_id_subclass_hamster_idx` (`id_subclass_pet` ASC) VISIBLE,
+  INDEX `fk_id_subclass_hamster_idx` (`id_subclass` ASC) VISIBLE,
   CONSTRAINT `fk_id_subclass_hamster`
-    FOREIGN KEY (`id_subclass_pet`)
+    FOREIGN KEY (`id_subclass`)
     REFERENCES `human_friends`.`pets_subclass` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
 CREATE TABLE `human_friends`.`horse` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `id_subclass_pet` INT NOT NULL,
+  `id_subclass` INT NOT NULL,
   `nickname` VARCHAR(45) NOT NULL,
   `date_birth` DATETIME NOT NULL,
   `commands` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_id_subclass_horse_idx` (`id_subclass_pet` ASC) VISIBLE,
+  INDEX `fk_id_subclass_horse_idx` (`id_subclass` ASC) VISIBLE,
   CONSTRAINT `fk_id_subclass_horse`
-    FOREIGN KEY (`id_subclass_pet`)
+    FOREIGN KEY (`id_subclass`)
     REFERENCES `human_friends`.`pets_subclass` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
   CREATE TABLE `human_friends`.`camel` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `id_subclass_pet` INT NOT NULL,
+  `id_subclass` INT NOT NULL,
   `nickname` VARCHAR(45) NOT NULL,
   `date_birth` DATETIME NOT NULL,
   `commands` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_id_subclass_camel_idx` (`id_subclass_pet` ASC) VISIBLE,
+  INDEX `fk_id_subclass_camel_idx` (`id_subclass` ASC) VISIBLE,
   CONSTRAINT `fk_id_subclass_camel`
-    FOREIGN KEY (`id_subclass_pet`)
+    FOREIGN KEY (`id_subclass`)
     REFERENCES `human_friends`.`pets_subclass` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
 
 CREATE TABLE `human_friends`.`donkey` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `id_subclass_pet` INT NOT NULL,
+  `id_subclass` INT NOT NULL,
   `nickname` VARCHAR(45) NOT NULL,
   `date_birth` DATETIME NOT NULL,
   `commands` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_id_subclass_donkey_idx` (`id_subclass_pet` ASC) VISIBLE,
+  INDEX `fk_id_subclass_donkey_idx` (`id_subclass` ASC) VISIBLE,
   CONSTRAINT `fk_id_subclass_donkey`
-    FOREIGN KEY (`id_subclass_pet`)
+    FOREIGN KEY (`id_subclass`)
     REFERENCES `human_friends`.`pets_subclass` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
